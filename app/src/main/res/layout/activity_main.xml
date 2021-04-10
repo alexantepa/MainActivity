@@ -23,31 +23,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
-        android:layout_weight="1"
         android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_weight="1"
         android:text="ЛЕНТА"
         android:textSize="20dp"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:id="@+id/lentaButton"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="fkjdfhkdfhdf"
-            android:background="@color/cardview_dark_background"/>
+        android:id="@+id/mapButton"/>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="КАРТА"
-        android:textSize="20dp"
-        android:id="@+id/mapButton"
-        android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:id="@+id/balls"
+            android:text="0"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+
+
     </LinearLayout>
 </FrameLayout>

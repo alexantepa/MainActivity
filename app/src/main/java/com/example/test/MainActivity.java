@@ -3,6 +3,7 @@ package com.example.test;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     ListView list;
-    Button mapButton, lentaButton;
+    Button mapButton, balls;
     FloatingActionButton addButton;
     SimpleAdapter simpleAdapter;
+    SharedPreferences sharedPreferences;
+    private static final String STATUS = "status";
+    int stat, count;
 
 
     @Override
@@ -26,17 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mapButton = findViewById(R.id.mapButton);
-        lentaButton = findViewById(R.id.lentaButton);
         addButton = findViewById(R.id.addButton);
+        balls = findViewById(R.id.balls);
         list = findViewById(R.id.list);
+        stat = getIntent().getIntExtra(STATUS, 0);
+        count = Integer.parseInt(balls.getText().toString());
 
 
-        lentaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Good", Toast.LENGTH_SHORT).show();
-            }
-        });
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,5 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //simpleAdapter = new SimpleAdapter(this, )
+
+        sharedPreferences = getSharedPreferences("pref", 0);
     }
 }
