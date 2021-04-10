@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         lentaButton = findViewById(R.id.lentaButton);
         addButton = findViewById(R.id.addButton);
         list = findViewById(R.id.list);
-        hhh = findViewById(R.id.hhh);
 
         lentaButton.setOnClickListener(new View.OnClickListener() {
             @Override
