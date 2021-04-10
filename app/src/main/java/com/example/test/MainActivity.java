@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button mapButton, lentaButton;
     FloatingActionButton addButton;
     SimpleAdapter simpleAdapter;
-    Button hhh;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         lentaButton = findViewById(R.id.lentaButton);
         addButton = findViewById(R.id.addButton);
         list = findViewById(R.id.list);
+
 
         lentaButton.setOnClickListener(new View.OnClickListener() {
             @Override
