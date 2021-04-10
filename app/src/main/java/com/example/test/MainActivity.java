@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button mapButton, lentaButton;
     FloatingActionButton addButton;
     SimpleAdapter simpleAdapter;
+    Button hhh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         lentaButton = findViewById(R.id.lentaButton);
         addButton = findViewById(R.id.addButton);
         list = findViewById(R.id.list);
+        hhh = findViewById(R.id.hhh);
 
         lentaButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Good", Toast.LENGTH_SHORT).show();
             }
         });
-
         mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Goooooooooood", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Goooooooooood", Toast.LENGTH_SHORT).show();
